@@ -6,4 +6,8 @@ html,
 :root {
     margin: 0;
     padding: 0;
+    background-color: theme("colors.background");
+    background-image: url("./assets/Github.png");
+    background-repeat: no-repeat;
+    background-position: 70% 0%;
 }
