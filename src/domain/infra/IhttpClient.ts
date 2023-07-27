@@ -1,7 +1,14 @@
-// https://api.github.com/search/repositories?q=gitSearcher
-// https://api.github.com/search/users?q=repos%3A%3E%3D45000&sort=repositories&order=desc& nao sei ainda
+import {
+    GetRepositoriesByUserResponse,
+    GetRepositoriesResponse,
+    IRepository,
+} from "../repository/types/IRepository";
+import { GetUsersResponse, IUserByLogin } from "../user/types/IUser";
 
-// https://api.github.com/repos/JhonatanKennedy/gitSearcher pesquisar por user
 export interface IHttpClient {
-    get;
+    getRepositories(name: string): Promise<GetRepositoriesResponse>;
+    getRepositoriesByUser(name: string): Promise<GetRepositoriesByUserResponse>;
+    getRepositoryByUser(name: string, repoName: string): Promise<IRepository>;
+    getUsers(name: string): Promise<GetUsersResponse>;
+    getUserByLogin(name: string): Promise<IUserByLogin>;
 }

@@ -27,12 +27,14 @@ export const Card = (props: CardProps) => {
                     </span>
                 </div>
             </div>
-            <button
-                className="h-12 w-12 flex justify-center items-center rounded-full hover:bg-card-subtitle/5"
-                onClick={props.onClickButtom}
-            >
-                <BsChevronRight />
-            </button>
+            <div>
+                <button
+                    className="h-12 w-12 flex justify-center items-center rounded-full hover:bg-card-subtitle/5"
+                    onClick={props.onClickButtom}
+                >
+                    <BsChevronRight />
+                </button>
+            </div>
         </div>
     );
 };
